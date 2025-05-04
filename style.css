@@ -1,0 +1,192 @@
+@font-face {
+    font-family: "Roboto Mono", monospace;
+    src: url(/RobotoMono.ttf);
+
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'Ultrafont';
+    src: url(/VCR_OSD_MONO.ttf);
+}
+
+a {
+    color: pink;
+}
+
+a:hover {
+    color: magenta;
+    font-weight: bold;
+}
+
+a:visited {
+    color: mediumpurple;
+}
+
+body {
+    background-image: url(/BG/SpaceBackground.png);
+    background-size: 177px;
+    background-attachment: fixed;
+    animation: moveIt 125s linear infinite;
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: url(/cursor.png), auto;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+@keyframes moveIt {
+    from {
+        background-position: bottom left;
+    }
+
+    to {
+        background-position: top right;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Ultrafont";
+}
+
+h1 {
+    font-size: 250%;
+}
+
+div.Main {
+    width: 1500px;
+    margin: auto;
+    /* margin-top: 175px; */
+    border: 5px solid #b700ff;
+    border-radius: 5px;
+    padding: 25px;
+    
+    animation: BodymoveIt 45s linear infinite;
+    height: auto;
+}
+
+@keyframes BodymoveIt {
+    from {
+        background-position: top center;
+    }
+
+    to {
+        background-position: bottom center;
+    }
+}
+
+img { 
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated;                 /* Universal support since 2021   */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+
+}
+
+div.MainHeader {
+    background-image: url(BG/Header\ Banner.png);
+    background-size: auto;
+    height: 175px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid white;
+    animation: moveIt 50s linear infinite;
+}
+
+img.SaltButton {
+    transition: transform .05s linear
+}
+
+img.SaltButton:hover {
+    transform: scale(1.1);
+}
+
+img.ProjectButton {
+    width: 64px;
+    height: auto;
+}
+
+img.ProjectThumb {
+    width: 405px;
+    height: 270px;
+    object-fit: cover;
+}
+
+.BaldiButton {
+    border: 25px solid transparent;
+    padding: 0px 25px;
+    line-height: 75px;
+    border-image: url(/Button-Inactive.png) 20 round;
+    box-shadow: inset 0 500px 10px #9a00a3;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated;                 /* Universal support since 2021   */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+}
+
+a.BaldiButton, a.BaldiButton:hover, a.BaldiButton:active, a.BaldiButton:visited {
+    color:white;
+}
+
+.BaldiButton:active {
+    border-image-source: url(/Button-Active.png);
+    box-shadow: inset 0 100px 10px #770084;
+}
+
+small {
+    font-size: 75%;
+}
+
+.Neon1 {
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 10px #bc75ff;
+}
+
+.Neon2 {
+    border: 5px solid #b700ff;
+    border-radius: 28px;
+}
+
+.Neon3 {
+    border: 5px solid white;
+    border-radius: 25px;
+}
+
+.Neon4 {
+    border: 5px solid #b700ff;
+    border-radius: 20px;
+    height: auto;
+    width: 475px;
+    background-color: #160b35;
+    margin: auto;
+    padding: 45px;
+    text-align: center;
+    align-self: center;
+    box-shadow: inset 0px 0px 10px 10px #bc75ff;
+}

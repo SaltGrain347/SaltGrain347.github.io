@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Salt's Site: Socials</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+
+</head>
+<audio id="Music" aria-label="Play music" controls src="/Music/LibraryStroll.mp3" hidden loop autoplay></audio>
+<style>
+    .closed {
+        transform: scaley(0);
+        opacity: 0;
+        height: 0px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .WarningBox {
+        background-color: red;
+        overflow: hidden;
+        padding: 15px;
+        margin: 15px auto;
+        padding-bottom: 30px;
+        width: 500px;
+        border-radius: 5px;
+        border: 5px solid darkred;
+        transition: all .25s ease-in-out;
+        transition-behavior: allow-discrete;
+    }
+
+    .WarningBox:hover
+    {
+        animation: Shake 0.25s;
+    }
+    
+    @keyframes Shake{
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+
+    }
+
+    .Unfinished {
+        filter: saturate(100%) grayscale(100%);
+    }
+</style>
+
+<body>
+    <div class="Main" style="background-image: url(/BG/ocean.jpg);">
+        <div class="MainHeader"><img src="/GrainOfSaltLogo.png"
+                height="175px"></div>
+
+        <h4><i>𝆕 Library Stroll - OneShot~</i></h4>
+        <div style="text-align: center;">
+
+            <h1>My socials/links!</h1>
+
+            <h2>Main</h2>
+            <a href="https://www.youtube.com/@GrainOfSalt347"><img title="Youtube" class="SaltButton" src="/SocialButton/Youtube.png"></a>
+            <a href="https://www.tumblr.com/0saltgrain0"><img title="Tumblr" class="SaltButton" src="/SocialButton/Tumblr.png"></a>
+            <a href="https://bsky.app/profile/grainofsalt347.bsky.social"><img title="Bluesky" class="SaltButton" src="/SocialButton/Bluesky.png"></a>
+            <a href="https://discord.gg/wBurU5yWtK"><img title="Discord Server" class="SaltButton" src="/SocialButton/Discord.png"></a>
+            <a href="https://en.pronouns.page/@GrainOfSalt0"><img title="Pronouns.page" class="SaltButton" src="/SocialButton/Pronouns.page.png"></a>
+
+            <h2>Games & Creations</h2>
+            <a href="https://0saltgrain0.itch.io/"><img title="Itch.io" class="SaltButton" src="/SocialButton/Itch.io.png"></a>
+            <a href="https://gamejolt.com/invite/SaltGrain"><img title="Gamejolt" class="SaltButton" src="/SocialButton/Gamejolt.png"></a>
+            <a href="https://gamebanana.com/members/1786575"><img title="Gamebanana" class="SaltButton" src="/SocialButton/Gamebanana.png"></a>
+            <a href="https://github.com/SaltGrain347"><img title="Github" class="SaltButton" src="/SocialButton/Github.png"></a>
+
+            <h2>Arts</h2>
+            <a href="https://toyhou.se/GrainOfSalt"><img class="SaltButton" src="/SocialButton/Toyhou.se.png"></a>
+            <a href="#"><img class="SaltButton Unfinished" title="Deviantart. Not yet, Implicit." src="/SocialButton/Deviantart.png"></a>
+            <!-- <a onclick="OpenWarn(Warn, 'Blah', 'pizzatower.wiki')" href="#Warn"> no not yet -->
+            <a href="#"><img class="SaltButton Unfinished" title="FurAffinity. Not yet, Implicit." src="/SocialButton/FurAffinity.png"></a>
+            <h2>Miscellaneous</h2>
+            <a href="https://www.roblox.com/users/83099286/profile"><img title="Roblox" class="SaltButton" src="/SocialButton/Roblox.png"></a>
+
+            <div id="Warn" class="closed WarningBox">
+                <h2 onclick="ClosedDiv(this)" style="float:right;"><u>X</u></h2>
+                <h1>CONTENT WARNING</h1>
+    
+                <p id="textid">you will see gore!!!!!!!!!</p>
+                <br><a href="#" id="linkid">Continue anyway.</a>
+            </div>
+            
+
+            <br><a href="/main.html"><img src="/Button/Return.png" class="SaltButton" style="margin-top: 45px;"></a>
+
+        </div> 
+    </div>
+
+</body>
+<script>
+    function ClosedDiv(id) {
+        id.parentElement.classList.add('closed')
+    }
+
+    function OpenWarn(id, text, link) {
+        id.classList.remove('closed')
+        document.getElementById('textid').innerHTML = text;
+        var httplink = "https://"+link;
+        var linkbutton = document.getElementById("linkid");
+        linkbutton.setAttribute("href", httplink);
+    }
+</script>
+
+</html>
