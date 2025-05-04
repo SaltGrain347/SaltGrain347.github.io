@@ -7,7 +7,38 @@
     <link rel="stylesheet" href="/style.css">
     <title>Salt's Site: Main</title>
     <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <style>
+        body {
+            padding: 75px;
+        }
 
+        .Main {
+            width: 500px;
+        }
+
+        .changelog {
+            width: 250px;
+            margin-left: 45px;
+            border: 5px solid #b700ff;
+            border-radius: 5px;
+            font-family: "Ultrafont";
+            padding: 10px;
+            max-height: 350px;
+            overflow-x: wrap;
+            overflow-y: scroll;
+            position: fixed;
+            right: 50px; 
+            bottom: 25px;
+            background-color: #2c0e3a;
+            transition: max-height .5s ease-out;
+        }
+
+        .closed {
+            overflow-y: hidden;
+            max-height: 25px;
+        }
+        
+    </style>
 </head>
 <audio id="Music" aria-label="Play music" controls src="/Music/HipShop.mp3" hidden loop autoplay></audio>
 
@@ -57,7 +88,26 @@
         </div>
 
     </div>
-
+    <div class="changelog closed" id="changelogdiv">
+        <div style="border: 5px solid #b700ff; border-radius: 5px; height: 15px; width: auto; background-color: white;" onclick="TabberThing()"></div><br>
+    <p id="changelog">FAILED LOADING</p></div>
+    
 </body>
+<script>
+    fetch('changelog.txt')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('changelog').textContent = data;
+      });
 
+    function TabberThing() {
+        const div = document.getElementById("changelogdiv")
+        if(div.classList.contains('closed'))
+        {div.classList.remove('closed')}
+        else
+        {div.classList.add('closed')
+}
+        
+    }
+  </script>
 </html>
