@@ -211,7 +211,11 @@ small {
     padding-right: 2px;
 }
 
-.Spoiler a:not(:hover){
+.Spoiler a{
+    transition: color .2s ease-out;
+}
+
+.Spoiler:not(:hover) a{
     color:#0a0913;
 }
 
