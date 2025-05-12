@@ -24,13 +24,19 @@
             font-family: "Ultrafont";
             padding: 10px;
             max-height: 350px;
-            overflow-x: wrap;
-            overflow-y: scroll;
+
             position: fixed;
             right: 50px; 
             bottom: 25px;
             background-color: #2c0e3a;
             transition: max-height .5s ease-out;
+        }
+
+        .changelog pre{
+            overflow-x: wrap;
+            white-space: pre-wrap;
+            word-break: break-word;
+            overflow-y: scroll;
         }
 
         .closed {
@@ -58,20 +64,20 @@
             I'm into bunch of stuff, weird and obscure, such like: Roblox (Dandy's World, Block Tales, Forsaken, etc.),
             Baldi's Basics, Pizza Tower/Sugary Spire, Ultrakill, Friday Night Funkin', Undertale/Deltarune, Patapon, Object Show and much more
             medias.
-            <a href="/Unused/index.html" style="font-size: xx-small;">secret unused page</a>
+            <a href="/Unused/index" style="font-size: xx-small;">secret unused page</a>
         </p>
 
         <div style="overflow: hidden;">
             <img src="/SaltMain.png" style="float: left;">
             <h2>Note because yeah, it's infact Under Construction.</h2>
             <div style="text-align: center; margin-top: 75px;">
-                <a href="/Project/index.html"><img src="/Button/Project.png" class="SaltButton"></a>
-                <a href="/social.html"><img src="/Button/Social.png" class="SaltButton"></a>
-                <a href="/wip.html"><img src="/Button/misc.png" class="SaltButton"></a>
+                <a href="/Project/index"><img src="/Button/Project.png" class="SaltButton"></a>
+                <a href="/social"><img src="/Button/Social.png" class="SaltButton"></a>
+                <a href="/Resources/index"><img src="/Button/misc.png" class="SaltButton"></a>
                 <a href="https://docs.google.com/document/d/1NwISKb1PPBtq_7Kmp9Am0hJ0HLf7PoVwdT_GCSoBY1A/edit?usp=sharing">
                 <img src="/Button/OCs.png" class="SaltButton"></a>
-                <a href="/wip.html"><img src="/Button/Topic.png" class="SaltButton"></a>
-                <a href="/Fandom.html"><img src="/Button/Fandom.png" class="SaltButton"></a>
+                <a href="/wip"><img src="/Button/Topic.png" class="SaltButton Unfinished"></a>
+                <a href="/Fandom"><img src="/Button/Fandom.png" class="SaltButton"></a>
                 <br><img src="/UnderConstruction.png" height="175px">
             </div>
         </div>
@@ -90,7 +96,7 @@
     </div>
     <div class="changelog closed" id="changelogdiv">
         <div style="border: 5px solid #b700ff; border-radius: 5px; height: 15px; width: auto; background-color: white;" onclick="TabberThing()"></div><br>
-    <p id="changelog">FAILED LOADING</p></div>
+    <pre id="changelog">FAILED LOADING</pre></div>
     
 </body>
 <script>

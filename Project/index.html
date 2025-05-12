@@ -8,31 +8,72 @@
     <title>Salt's Site: Projects list</title>
     <link rel="icon" type="image/x-icon" href="/favicon.png">
     <style>
-        .Unfinished {
-        filter: saturate(100%) grayscale(100%);
-    }
+        .Disc {
+            width: 128px;
+            transition: transform .5s ease-in-out;
+            animation: discspin 10s linear infinite;
+            
+        }
+
+        .Disc:hover {
+            animation: 0;
+            filter: brightness(125%);
+        }
+
+        @keyframes discspin {
+            0% {
+                transform: rotateY(0deg);
+                filter: brightness(100%);
+            }
+
+            25% {
+                transform: rotateY(90deg);
+                filter: brightness(25%);
+            }
+
+            50% {
+                transform: rotateY(180deg);
+                filter: brightness(75%);
+            }
+
+            75% {
+                transform: rotateY(270%);
+                filter: brightness(25%);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+                filter: brightness(100%);
+            }
+        }
     </style>
 </head>
 <audio id="Music" aria-label="Play music" controls src="/Music/JUBRMain.mp3" hidden loop autoplay></audio>
+
 <body>
     <div class="Main" style="background-image: url(/BG/verystar.gif);">
-        <div class="MainHeader"><img src="/GrainOfSaltLogo.png"
-                height="175px"></div>
+        <div class="MainHeader"><img src="/GrainOfSaltLogo.png" height="175px"></div>
 
         <h4><i>𝆕 Main Theme - Joe's Ultimate Bus Ride~</i></h4>
         <div style="text-align: center;">
-            <h1>Type of projects</h1>
 
-                <a href="Baldi Mods.html" class="BaldiButton">Baldi's Basics Mods</a><br><br>
-                <a href="Scratch.html" class="BaldiButton">Scratch Projects/Games</a><br><br>
-                <span style="color: red; font-weight: bolder;">UNDERNEATH ME IS NOT YET FINISHED!!!!!!!</span><br><br>
-                <a href="Roblox.html" class="BaldiButton Unfinished">Roblox Games</a><br><br>
-                <a href="MISC.html" class="BaldiButton Unfinished">Miscellaneous</a>
+            <h1>Featured Projects</h1>
+            <a href="Baldi Mods#WEGA"><img src="DiscWega.png" class="Disc"></a>
 
 
-            <br><a href="/main.html"><img src="/Button/Return.png" class="SaltButton" style="margin-top: 45px;"></a>
 
-        </div> 
+
+            <h1>Project List</h1>
+
+            <a href="Baldi Mods" class="BaldiButton">Baldi's Basics Mods</a><br><br>
+            <a href="Scratch" class="BaldiButton">Scratch Projects/Games</a><br><br>
+            <a href="Roblox" class="BaldiButton Unfinished" title="Not yet finished!">Roblox Games</a><br><br>
+            <a href="MISC" class="BaldiButton Unfinished" title="Not yet finished!">Miscellaneous</a>
+
+
+            <br><a href="/main"><img src="/Button/Return.png" class="SaltButton" style="margin-top: 45px;"></a>
+
+        </div>
     </div>
 
 </body>

@@ -34,6 +34,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-display: fallback;
 
     cursor: url(/cursor.png), auto;
 }
@@ -189,4 +190,31 @@ small {
     text-align: center;
     align-self: center;
     box-shadow: inset 0px 0px 10px 10px #bc75ff;
+}
+
+.Unfinished {
+    filter: saturate(100%) grayscale(100%);
+}
+
+.ProjectText p {
+    max-width: 1000px;
+    margin: 10px auto;
+}
+
+.Spoiler {
+    color:#0a0913;
+    background-color: #0a0913;
+    transition: all .2s ease-out;
+    border-radius: 10px;
+    border: 1px white solid;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.Spoiler a:not(:hover){
+    color:#0a0913;
+}
+
+.Spoiler:hover {
+    color:white
 }
