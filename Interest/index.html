@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Salt's Webcorner ⤳ Interests</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <style>
+        .Icon {
+            width: 1rem;
+            height: auto;
+        }
+
+        #BookBase {
+            display: flex;
+            background-image: linear-gradient(rgb(204, 0, 255),rgb(105, 0, 146));
+            height: 500px;
+            width: 100%;
+            border-radius: 5px;
+            align-items: center;
+            padding: 5px 10px 10px;
+        }
+
+        #BookBase .Page {
+            height: 95%; 
+            width: 75%;
+            box-shadow: #111110 0px 2px 10px 2px;
+            padding: 10px;
+            color: #111110;
+        }
+
+        .Page p {
+            overflow-x: hidden;
+            max-height: 95%;
+        }
+
+
+        .Topic {
+            user-select: none;
+        }
+        
+        .Page span {
+            color: #111110;
+            text-decoration: none;
+            display: inline-block;
+            transform-origin: left top;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .Page span:not(.NoDesc):hover {
+            transform: scale(1.25);
+        }
+
+        .Page .NoDesc {
+            opacity: 0.75;
+        }
+
+        .Page .NoDesc:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+        #BookBase {
+            flex-direction: column;
+            height: 500px;
+            width: 100%;
+            
+            gap: 10px;
+        }
+
+        .Topic {
+            height: 150px !important;
+        }
+
+        .Topic p {
+            max-height: 150px !important;
+        }
+
+        .Page {
+            background-image: radial-gradient(azure 75%,grey) !important;
+        }
+
+        #Desc {
+            max-height: 250px;
+        }
+        }
+    </style>
+</head>
+<audio id="Music" aria-label="Play music" controls src="/Music/StrongCold.mp3" hidden loop></audio>
+<audio id="PageSFX" controls src="PageTurn.wav" hidden></audio>
+
+<body>
+    <img src="/GrainOfSaltLogo.png" id="Logo">
+
+    <div id="Layout">
+        <div id="NavigateDiv">
+            <div id="Sticky">
+            <img src="/yippu.gif" width="100%">
+            <hr>
+
+            <a href="/Home" class="NavButtonText">
+            <div class="NavButton">Home
+            <img src="/SmileyBall/6.png">
+            </div></a>
+
+            <a href="/About" class="NavButtonText">
+            <div class="NavButton">About
+            <img src="/SmileyBall/4.png">
+            </div></a>
+
+            <a href="/OCs" class="NavButtonText">
+            <div class="NavButton">OCs
+            <img src="/SmileyBall/8.png">
+            </div></a>
+
+            <a href="/Interest/Index" class="NavButtonText">
+            <div class="NavButton">Interest
+            <img src="/SmileyBall/2.png">
+            </div></a>
+
+            <a href="/Project/Index" class="NavButtonText">
+            <div class="NavButton">Projects
+            <img src="/SmileyBall/6.png">
+            </div></a>
+
+            <a href="/Resources/Index" class="NavButtonText">
+            <div class="NavButton">Resources
+            <img src="/SmileyBall/10.png">
+            </div></a>
+            <hr>
+            </div>
+        </div>
+        <div id="MainDiv">
+            <h1>My Interests</h1>
+            <p>I have a <b>LOTS</b> of interest, if it's a general thing or a media that I like, I'd put here. At this moment, if there's an entries that greyed out, that mean it doesn't have a description for it!
+            <br>
+
+            <div id="BookBase">
+                <div class="Page Topic" style="background-image: linear-gradient(to left, #3a3a37, grey 1%,azure 25%);"><p>
+
+                <strong>Themes</strong><br>
+                <span onclick="Description('Alien')">Alien<img src="Icon/Placeholder.png" class="Icon"></span><br>
+                <span onclick="Description('Alien')">Alien<img src="Icon/Placeholder.png" class="Icon"></span><br>
+                <span onclick="Description('Axolotl')">Axolotl<img src="Icon/Placeholder.png" class="Icon"></span><br>
+                <span onclick="Description('Internet')">Early Internet<img src="Icon/Placeholder.png" class="Icon"></span><br>
+                <span onclick="Description('Fish')">Fish<img src="Icon/Placeholder.png" class="Icon"></span><br>
+                <span onclick="Description('Frutiger')">Frutiger Aero<img src="Icon/Placeholder.png" class="Icon"></span><br>
+                <span onclick="Description('Insect')">Insect<img src="Icon/Placeholder.png" class="Icon"></span><br>
+                <span onclick="Description('Alien')">Robot<img src="Icon/Placeholder.png" class="Icon"></span><br>
+                <span onclick="Description('Smiley')">Smiley Face<img src="Icon/Placeholder.png" class="Icon"></span><br>
+                <br>
+                <strong>Fandoms</strong><br>
+                <span onclick="Description('Baldi')">Baldi's Basics<img src="Icon/BaldiBasic.png" class="Icon"></span><br>
+                <span onclick="Description('BlockTale')">Block Tales<img src="Icon/BlockTales.png" class="Icon"></span><br>
+                <span onclick="Description('Dandy')">Dandy's World<img src="Icon/DandyWorld.png" class="Icon"></span><br>
+                <span onclick="Description('Deltarune')">Deltarune<img src="Icon/Deltarune.png" class="Icon"></span><br>
+                <span onclick="Description('Ena')">ENA<img src="Icon/ENA.png" class="Icon"></span><br>
+                <span onclick="Description('FNAF')">Five Nights at Freddy<img src="Icon/FNAF.png" class="Icon"></span><br>
+                <span onclick="Description('FNF')">Friday Night Funkin'<img src="Icon/FNF.png" class="Icon"></span><br>
+                <span onclick="Description('Kinito')">KinitoPET<img src="Icon/KinitoPet.png" class="Icon"></span><br>
+                <span onclick="Description('Minecraft')">Minecraft<img src="Icon/Minecraft.png" class="Icon"></span><br>
+                <span onclick="Description('ObjectShow')">Object Shows<img src="Icon/ObjectShow.png" class="Icon"></span><br>
+                <span onclick="Description('OneShot')">Oneshot<img src="Icon/Oneshot.png" class="Icon"></span><br>
+                <span onclick="Description('Patapon')">Patapon<img src="Icon/Patapon.png" class="Icon"></span><br>
+                <span onclick="Description('PizzaTower')">Pizza Tower<img src="Icon/PizzaTower.png" class="Icon"></span><br>
+                <span onclick="Description('PVZ')">Plants vs. Zombies<img src="Icon/PlantVsZombie.png" class="Icon"></span><br>
+                <span onclick="Description('Pokemon')">Pokemon<img src="Icon/Pokemon.png" class="Icon"></span><br>
+                <span style="color: maroon" onclick="Description('Roblox')">Roblox<img src="Icon/Roblox.png" class="Icon"></span><br>
+                <span onclick="Description('Sugary')">Sugary Spire<img src="Icon/SugarySpire.png" class="Icon"></span><br>
+                <span onclick="Description('TTCC')">ToonTown: Corporate Clash<img src="Icon/TTCorporateClash.png" class="Icon"></span><br>
+                <span onclick="Description('GayRobot')">ULTRAKILL<img src="Icon/ULTRAKILL.png" class="Icon"></span><br>
+                <span onclick="Description('Undertale')">UNDERTALE<img src="Icon/Undertale.png" class="Icon"></span><br>
+            
+                </p></div>
+                <div class="Page DescPage" style="background-image: linear-gradient(to right, #3a3a37, grey 1%,azure 25%);">
+                    <p id="Desc" style="white-space: pre-wrap;"></p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="MusicPlayerBox">
+        <span id="MusicButton" style="font-size: 2rem;" onclick="MuteButton()">⏸</span>
+        <div style="line-height: 1rem;" id="MusicText">
+            Teeth Dust In The Strongcold
+            <br><span style="font-size: .75rem;">ClascyJitto</span>
+        </div>
+        <script src="/MusicPlayer/Script.js"></script>
+    </div>
+</body>
+<script>
+    const DescText = document.getElementById('Desc');
+    let CurrentInfo = null;
+    let DescJson = {};
+
+    DescText.innerHTML = '<h2>This is a Description Part!</h2>Click any general topics or media to read here!'
+    fetch('TopicDesc.json')
+    .then(response => response.json())
+    .then(data => {
+        DescJson = data;
+        GreyText();
+    })
+    .catch(error => {
+        console.error('Error loading JSON:', error);
+    });
+
+    function GreyText() {
+        let ListText = document.querySelectorAll('.Topic span');
+        const ListKey = Object.keys(DescJson);
+
+        for (let i = 0; i < ListKey.length; i++) {
+            if (DescJson[ListKey[i]].includes('[Desc]') == true) {
+                ListText[i -1].classList.add("NoDesc");
+            }
+        }
+    }
+ 
+    function Description(text) {
+        if (DescJson[text].includes('[Desc]') == true) return;
+
+        if (!(CurrentInfo == text)) {
+        document.getElementById("PageSFX").currentTime = 0;
+        document.getElementById("PageSFX").play();
+        DescText.innerHTML = DescJson[text] || "No Description Avalilable.";
+        CurrentInfo = text;
+        }
+
+    }
+</script>
+</html>

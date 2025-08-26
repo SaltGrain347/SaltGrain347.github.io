@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Salt's Webcorner ⤳ Baldi's Basics Projects</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <style>
+        .Baldi {
+            font-family: cursive;
+            color: #33ff00;
+        }
+
+        .Basic {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            color: black;
+            text-shadow: 0px 0px 2px white;
+        }
+
+        .Plus {
+            font-family: cursive;
+            font-weight: bolder;
+            color: gold;
+        }
+
+        .Classic {
+            font-family: cursive;
+            font-weight: bolder;
+            color: red;
+        }
+
+        .tabcontent {
+            transform-origin: top center;
+            animation: OnLoadAnim .5s ease-in-out;
+            flex-direction: column;
+            gap: 45px;
+        }
+
+
+        .tab {
+            display: flex;
+            gap: 10px;
+            margin-left: 25px;
+        }
+
+        .tab .tablinks {
+            border: 5px #33ff00 solid;
+            border-bottom: transparent;
+            border-radius: 5px 5px 0px 0px;
+            background-color: #00130f;
+            padding: 10px;
+            
+            width: 75px;
+            transition: all .25s ease-in-out;
+        }
+
+        .tab .tablinks:hover {
+            background-color: #003300;
+            transform: scale(1.25);
+            cursor: pointer;
+        }
+
+        #ProjectList {
+           border: 5px #33ff00 solid;
+            border-radius: 5px;
+            background-image: linear-gradient(to top, #00130f, #00130f, #00130f, #003300);
+            background-size: 100% 16px;
+            animation: scanlines infinite 500s linear;
+            padding: 5px;
+            max-width: 100%;
+            margin-left: -1.5%;
+        }
+
+        .tabcontent hr {
+            border-color: #33ff00 !important;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+
+
+        .ProjectLayout .ProjectThumb {
+            border-color: #33ff00 !important;
+            box-shadow: #003300 0px 10px 10px 5px !important;
+        }
+
+        .ProjectLayout .ProjectThumb:hover {
+            box-shadow: #86ff68 0px 10px 10px 10px !important;
+        }
+
+        @keyframes OnLoadAnim {
+            from {
+                opacity: 0%;
+                transform: scaleX(0);
+            }
+            to {
+                opacity: 100%;
+                transform: scaleX(1);
+            }
+        }
+    </style>
+</head>
+<audio id="Music" aria-label="Play music" controls src="/Music/IntotheShop.wav" hidden loop></audio>
+<audio id="ClickSFX" ontrols src="ItemPickup.wav" hidden></audio>
+
+<body>
+    <img src="/GrainOfSaltLogo.png" id="Logo">
+
+    <div id="Layout">
+        <div id="NavigateDiv">
+            <div id="Sticky">
+            <img src="/yippu.gif" width="100%">
+            <hr>
+
+            <a href="/Home" class="NavButtonText">
+            <div class="NavButton">Home
+            <img src="/SmileyBall/6.png">
+            </div></a>
+
+            <a href="/About" class="NavButtonText">
+            <div class="NavButton">About
+            <img src="/SmileyBall/4.png">
+            </div></a>
+
+            <a href="/OCs" class="NavButtonText">
+            <div class="NavButton">OCs
+            <img src="/SmileyBall/8.png">
+            </div></a>
+
+            <a href="/Interest/Index" class="NavButtonText">
+            <div class="NavButton">Interest
+            <img src="/SmileyBall/2.png">
+            </div></a>
+
+            <a href="/Project/Index" class="NavButtonText">
+            <div class="NavButton">Projects
+            <img src="/SmileyBall/6.png">
+            </div></a>
+
+            <a href="/Resources/Index" class="NavButtonText">
+            <div class="NavButton">Resources
+            <img src="/SmileyBall/10.png">
+            </div></a>
+            <hr>
+            </div>
+        </div>
+        <div id="MainDiv">
+            <h1>Baldi's Basics</h1>
+            <p>There's two type, Classic and Plus. Currently the Plus section is only Texture pack!</p>
+           
+            <div class="tab">
+                <div class="tablinks" onclick="openCity('Classic',true)" id="defaultOpen"> <span class="Baldi">B</span><span class="Basic">B</span></div>
+                <div class="tablinks" onclick="openCity('Plus',true)"> <span class="Baldi">B</span><span class="Basic">B</span><span class="Plus">+</span></div>
+            </div>
+            <div id="ProjectList">
+
+                <div id="Classic" class="tabcontent">
+                    <h1 style="text-align: center;"><span class="Baldi">Baldi's</span><span class="Basic"> BASICS</span><span class="Classic"> Classic</span></h1>
+
+
+                    <div class="ProjectLayout">
+                        <img src="Thumbnail/BBIRSCover.png" class="ProjectThumb">
+                        <div class="ProjectText">
+                            <h2>Baldi's Basics In Robloxian Stuff</h2>
+                            <hr>
+                            <p>Baldi's Basic In Robloxian Stuffs is my first* mod on baldi ever. it aims to create content based on those Roblox's Baldi's Games while adding custom features. Originally used the KOTLIN decompile before switching to PorkyPower decompile.<br><small>(there were few attempt of making a mod in private*)</small>
+                            <br><strong>Status: Released & Discontinued (Unmotivation)</strong></p>
+                            <a href="https://gamebanana.com/wips/87458"><img src="/SocialButton/Gamebanana.png" class="Button"></a>
+                            <a href="https://0saltgrain0.itch.io/bb-in-robloxian-stuff"><img src="/SocialButton/Itch.io.png" class="Button"></a>
+                        </div>
+                    </div>
+
+                    <div class="ProjectLayout">
+                        <img src="Thumbnail/BBForbidden.jpg" class="ProjectThumb">
+                        <div class="ProjectText">
+                            <h2>Baldi's Basics Forbidden<br><small>(Baldi's BASICS Запрещенный)</small></h2>
+                            <hr>
+                            <p>Baldi's Basics Forbidden <small>(Baldi's BASICS Запрещенный)</small> is my idea of a lost Baldi mod that was made in Russia <small>(I don't speak Russian)</small> and takes inspirations from <a href="https://gamebanana.com/mods/494365">BASICS</a>, <a href="https://continued-exe.fandom.com/wiki/The_Blue_Pendrive">El Pendrive Azul (The Blue Pendrive)</a>, and FNAF Ransomware. Mod used the 1.2.2 Version of Classic instead of recent version.
+                            <br><strong>Status: Wrapped Up (Fully Finished)</strong></p>
+                            <a href="https://gamebanana.com/mods/544593"><img src="/SocialButton/Gamebanana.png" class="Button"></a>
+                        </div>
+                    </div>
+
+                    <div class="ProjectLayout">
+                        <img src="Thumbnail/WegaPromoArtGameJolt.png" class="ProjectThumb">
+                        <div class="ProjectText">
+                            <h2>Wega's Way to CRACK A MOVIE! (FREE!)</h2>
+                            <hr>
+                            <p>LWega's Way to CRACK A MOVIE! (FREE!) is my take on <a href="https://peeblo.itch.io/wegas-challenge">Wega's Challenge</a> in Baldi's Schoolhouse, all character are replaced with luigi-based media <span class="Spoiler">(Minus the Bear5)</span> and has a somewhat challenging Hard mode.
+                            <br><strong>Status: Released (Future Update Yet Pending)</strong></p>
+                            <a href="https://gamebanana.com/mods/576754"><img src="/SocialButton/Gamebanana.png" class="Button"></a>
+                            <a href="https://0saltgrain0.itch.io/salts-wegas-challenge"><img src="/SocialButton/Itch.io.png" class="Button"></a>
+                            <a href="https://gamejolt.com/games/salt-wega-challenge/983573"><img src="/SocialButton/Gamejolt.png" class="Button"></a>
+                        </div>
+                    </div>
+
+                    <div class="ProjectLayout">
+                        <img src="Thumbnail/Subterpozz.png" class="ProjectThumb">
+                        <div class="ProjectText">
+                            <h2>SUBTERPOZZ<br><small>(another generic subterbaldi reskin mod)</small></h2>
+                            <hr>
+                            <p>SUBTERPOZZ <small>(another generic subterbaldi reskin mod)</small> is an April fool Subterbaldi Mod which just parodies on subterbaldi clone/reskins while almost having special mechanics. the story is taken places after Pozz's Simpleschool.
+                            <br><strong>Status: Wrapped Up (Fully Finished)</strong></p>
+                            <a href="https://gamebanana.com/mods/585827"><img src="/SocialButton/Gamebanana.png" class="Button"></a>
+                        </div>
+                    </div>
+
+                    <div class="ProjectLayout">
+                        <img src="Thumbnail/TeaserPozz.png" class="ProjectThumb">
+                        <div class="ProjectText">
+                            <h2>Pozz's Simpleschool<br><small>(high mid effort reskin mod)</small></h2>
+                            <hr>
+                            <p>Pozz's Simpleschool <small>(high mid effort reskin mod)</small> is a planned Baldi mod that would be based on early popular Baldi's mod such as <a href="https://gamebanana.com/mods/52768">Dave's Fun Algebra Class</a>, <a href="https://gamebanana.com/mods/51701">Billy's Basic Educational Game</a>, <a href="https://archive.org/details/garretts-funny-animal-game">Garrett's Funny Animal Game</a>, and <a href="https://gamebanana.com/wips/66587">Carl's Dwindling Game.</a>
+                            <br><strong>Status: Planned (Concept Phase)</strong></p>
+                            <!-- <a href="https://www.tumblr.com/0saltgrain0"><img src="/SocialButton/Link.png" class="Button"></a> -->
+                        </div>
+                    </div>
+
+                    <div class="ProjectLayout">
+                        <img src="Thumbnail/TEMPThumb.png" class="ProjectThumb">
+                        <div class="ProjectText">
+                            <h2>Baldi's Baldsic In Baldtainment and Balding</h2>
+                            <hr>
+                            <p>Baldi's Baldsic In Baldtainment and Balding is a planned Baldi mod where you can pick a Baldi variant from hardest to joke variant, you'll been given ability to deal with them.<br><small>(NULL is not included*)</small>
+                            <br><strong>Status: Planned (Concept Phase)</strong></p>
+                            <!-- <a href="https://www.tumblr.com/0saltgrain0"><img src="/SocialButton/Link.png" class="Button"></a> -->
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="Plus" class="tabcontent">
+                    <h1 style="text-align: center;"><span class="Baldi">Baldi's</span><span class="Basic"> BASICS</span><span class="Plus"> +</span></h1>
+                    
+                    <div class="IgnoreGap"><h2 style="color: #33ff00;">Custom Asset Pack</h2><hr></div>
+
+                    <div class="ProjectLayout">
+                        <img src="Thumbnail/MoreFood.png" class="ProjectThumb">
+                        <div class="ProjectText">
+                            <h2>(0.9+) More FOOD!<br><small>(Easy Mode For Quick-Pick-Nic)</small></h2>
+                            <hr>
+                            <p>More Food is a mini texture pack that Changes the most of pizzas and hot dogs from Quick-Pick-Nic Minigame with "custom" sprites. <small>(which few of them from <a href="https://gamebanana.com/mods/576267">Lots O' Items.</a>)</small></p>
+                            <a href="https://gamebanana.com/mods/576389"><img src="/SocialButton/Gamebanana.png" class="Button"></a>
+                        </div>
+                    </div>
+
+                    <!-- not deemed worthy -->
+                    <!--
+                    <div class="ProjectLayout">
+                        <img src="Thumbnail/DoorMissing.png" class="ProjectThumb">
+                        <div class="ProjectText">
+                            <h2>(0.9) WHERE'S the DOOR!?</h2>
+                            <hr>
+                            <p>Turns all (Vanilla) doors invisible, even in minimaps. makes the game way damn HARDER.</p>
+                            <a href="https://gamebanana.com/mods/581081"><img src="/SocialButton/Gamebanana.png" class="Button"></a>
+                        </div>
+                    </div>
+                    -->
+
+                    <div class="ProjectLayout">
+                        <img src="Thumbnail/SaltHard.png" class="ProjectThumb">
+                        <div class="ProjectText">
+                            <h2>(0.9) Salt's Hard Mode</h2>
+                            <hr>
+                            <p>Salt's Hard Mode is a texture pack which is a high effort version of <a href="https://gamebanana.com/mods/580577">3XTREME PAC</a> which attempt to make the game harder by making item slot obscure, most doors being Classroom door, and etc.</p>
+                            <a href="https://gamebanana.com/mods/583295"><img src="/SocialButton/Gamebanana.png" class="Button"></a>
+                        </div>
+                    </div>
+
+                    <div class="ProjectLayout">
+                        <img src="Thumbnail/OldBaldi.png" class="ProjectThumb">
+                        <div class="ProjectText">
+                            <h2>(0.10) Salt's Pretexture Edition</h2>
+                            <hr>
+                            <p>Salt's PreTexture Edition is a texture pack which is my take to replicate and use older or placeholder graphic over the finalized assets.
+                            <br><small>This texture pack doesn't try to aim anything to revert most the content to be old, as this texture pack just aims to replicate the old style of pre-plus, if you want to get actually old asset, recommended to use <a href="https://gamebanana.com/mods/482089">RE-MASTER Texture pack</a></small></p>
+                            <a href="https://gamebanana.com/mods/592321"><img src="/SocialButton/Gamebanana.png" class="Button"></a>
+                        </div>
+                    </div>
+
+                    <div class="ProjectLayout">
+                        <img src="Thumbnail/BB+MMM.png" class="ProjectThumb">
+                        <div class="ProjectText">
+                            <h2>Microsoft Music Producer Music Pack</h2>
+                            <hr>
+                            <p>Salt's Microsoft Music Producer Pack basically give 3 generated musics each, including Field Trip Minigame and it's Tutorial Music and Lights Out Music.<br><small>(Playtime's Theme and Tutorial Theme doesn't get one)</small></p>
+                            <a href="https://gamebanana.com/mods/609466"><img src="/SocialButton/Gamebanana.png" class="Button"></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a href="/Project/Index" class="NavButtonText">
+            <div class="NavButton" style="margin-top: 75px;">Back
+            <img src="/SmileyBall/11.png">
+            </div></a>
+        </div>
+    </div>
+
+    <div id="MusicPlayerBox">
+        <span id="MusicButton" style="font-size: 2rem;" onclick="MuteButton()">⏸</span>
+        <div style="line-height: 1rem;" id="MusicText">
+            Into the Shop!
+            <br><span style="font-size: .75rem;">Project Splintza</span>
+        </div>
+        <script src="/MusicPlayer/Script.js"></script>
+    </div>
+    
+</body>
+<script> // Look, I don't serious need learn entirely new Coding Language for this. 😭😭🥀
+    function openCity(cityName, PlaySFX) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "flex";
+  document.getElementById(cityName).scrollIntoView();
+  if (PlaySFX) {document.getElementById('ClickSFX').play();}
+}
+
+document.addEventListener("DOMContentLoaded", openCity('Classic',false));
+</script>
+</html>

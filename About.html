@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Salt's Webcorner ⤳ About</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <style>
+        .speech-bubble {
+            position: relative;
+            background: #120c14;
+            border: #9816d4 10px solid;
+            border-radius: .4em;
+            padding: 15px;
+            
+            display: flex;
+            align-items: center;
+            width: 90%;
+        }
+
+        .speech-bubble:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border: 25px solid transparent;
+            border-right-color: #9816d4;
+            border-left: 0;
+            margin-top: -25px;
+            margin-left: -25px;
+        }
+
+        #Speechthing {
+            display: flex; 
+            gap: 45px;
+        }
+
+        @media (max-width: 768px) {
+            #Speechthing {
+                flex-direction: column;
+            }
+
+            .speech-bubble:after {
+                top: 0;
+	            left: 50%;
+                border-bottom: #120c14;;
+            }
+        }
+
+        .Flag img {
+            width: 100px;
+            border: #a621ff 5px solid;
+            border-radius: 15px 0px 15px 0px;
+        }
+
+        .Social {
+            height: 64px;
+            width: 64px;
+        }
+
+        .Tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .Tooltip .TooltipText {
+            visibility: hidden;
+            background-color: var(--dark2);
+            text-align: center;
+            border-radius: 25px;
+            padding: 5px 15px;
+            border: var(--link) 5px solid;
+            white-space: nowrap;
+
+            position: absolute;
+            z-index: 5555;
+            top: 50%;
+            left: 50%;
+            margin-left: -50px;
+            filter: opacity(0%);
+            transition: all 0.2s ease-in-out;
+            overflow: hidden;
+        }
+
+        .Tooltip:hover .TooltipText {
+            visibility: visible;
+            top: 100%;
+            left: 50%;
+            filter: opacity(100%);
+
+        }
+    </style>
+</head>
+<audio id="Music" aria-label="Play music" controls src="/Music/CastleTown.mp3" hidden loop></audio>
+
+<body>
+    <img src="/GrainOfSaltLogo.png" id="Logo">
+
+    <div id="Layout">
+        <div id="NavigateDiv">
+            <div id="Sticky">
+            <img src="/yippu.gif" width="100%">
+            <hr>
+
+            <a href="/Home" class="NavButtonText">
+            <div class="NavButton">Home
+            <img src="/SmileyBall/6.png">
+            </div></a>
+
+            <a href="/About" class="NavButtonText">
+            <div class="NavButton">About
+            <img src="/SmileyBall/4.png">
+            </div></a>
+
+            <a href="/OCs" class="NavButtonText">
+            <div class="NavButton">OCs
+            <img src="/SmileyBall/8.png">
+            </div></a>
+
+            <a href="/Interest/Index" class="NavButtonText">
+            <div class="NavButton">Interest
+            <img src="/SmileyBall/2.png">
+            </div></a>
+
+            <a href="/Project/Index" class="NavButtonText">
+            <div class="NavButton">Projects
+            <img src="/SmileyBall/6.png">
+            </div></a>
+
+            <a href="/Resources/Index" class="NavButtonText">
+            <div class="NavButton">Resources
+            <img src="/SmileyBall/10.png">
+            </div></a>
+            <hr>
+            </div>
+        </div>
+
+        <div id="MainDiv">
+            <h1>About me!</h1>
+            <div id="Speechthing">
+            <img src="Pfp.png" style="border-radius: 100%; border: #9816d4 solid 10px;" height="200px">
+                <div class="speech-bubble">
+                    <div id="statuscafe"><div id="statuscafe-username"></div><hr><br>
+                    <div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=grainofsalt" defer></script>
+                </div>
+            </div>
+
+            <div class="Box">
+                Heyo, my name <strong>GrainofSalt</strong>, or <b>Salt</b> for short pretty much. I'm an pretty online guy who's asexual and objectum from <b>Indonesia</b>.<br><br>
+                I'm a <b>digital artist</b> by using <b>Scratch/Turbowarp, Aseprite or Ibis Paint X on my phone</b>, and an <b>Anim8or Modeller</b><br><br>
+                I was pretty much exposed to the Internet when I was real young, which make me really interested in medias from the internet, from <b>Youtubes videos</b> or some <b>arts.</b><br><br>
+                I like making <b>Original Characters (OCs)</b> that I feel quite unique and sharing it to other people.<br><br>
+                I sorta do programming which I mostly do <b>HTMLs, C#, and Scratch Blocks</b> which I managed produced some <strong>Baldi's Basics Mods and games!</strong>
+            </div>
+
+            <div style="text-align: center; word-spacing: 45px;">
+                <div class="Tooltip Flag"><img src="flag-indo.png">
+                    <span class="TooltipText">Indonesian</span>
+                </div>
+                <div class="Tooltip Flag"><img src="flag-asexual.png">
+                    <span class="TooltipText">Asexual</span>
+                </div>
+                <div class="Tooltip Flag"><img src="flag-objectum.png">
+                    <span class="TooltipText">Objectum</span>
+                    <br>
+                </div>
+            </div>
+            <hr>
+            <h1>Socials</h1>
+            basically all my current social medias that I'm still active on, if there's other social media that has my name but isn't listed here, it's not mine.
+            <br><br>
+            <div style="text-align: center;">
+            <a href="https://www.youtube.com/@GrainOfSalt347"><img src="/SocialButton/Youtube.png" class="Button Social"></a>
+            <a href="https://www.tumblr.com/0saltgrain0"><img src="/SocialButton/Tumblr.png" class="Button Social"></a>
+            <a href="https://bsky.app/profile/saltgrain347.github.io"><img src="/SocialButton/Bluesky.png" class="Button Social"></a>
+            <a href="https://discord.gg/wBurU5yWtK"><img src="/SocialButton/Discord.png" class="Button Social"></a>
+            <a href="https://en.pronouns.page/@GrainOfSalt0"><img src="/SocialButton/Pronouns.page.png" class="Button Social"></a>
+            <a href="https://toyhou.se/GrainOfSalt"><img src="/SocialButton/Toyhou.se.png" class="Button Social"></a>
+            
+            <a href="https://0saltgrain0.itch.io/"><img src="/SocialButton/Itch.io.png" class="Button Social"></a>
+            <a href="https://gamejolt.com/invite/SaltGrain"><img src="/SocialButton/Gamejolt.png" class="Button Social"></a>
+            <a href="https://gamebanana.com/members/1786575"><img src="/SocialButton/Gamebanana.png" class="Button Social"></a>
+            <a href="https://github.com/SaltGrain347"><img src="/SocialButton/Github.png" class="Button Social"></a>
+
+            <a href="#/"><img src="/SocialButton/Deviantart.png" class="Button Social Unfinished"></a>
+            <a href="#/"><img src="/SocialButton/FurAffinity.png" class="Button Social Unfinished"></a>
+
+            <!-- fuck you roblox -->
+            <a href="https://www.roblox.com/users/83099286/profile"><img src="/SocialButton/Roblox.png" class="Button Social"></a>
+            <a href="https://linktr.ee/saltgrain"><img src="/SocialButton/Linktree.png" class="Button Social"></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="MusicPlayerBox">
+        <span id="MusicButton" style="font-size: 2rem;" onclick="MuteButton()">⏸</span>
+        <div style="line-height: 1rem;" id="MusicText">
+            My Castle Town
+            <br><span style="font-size: .75rem;">Toby Fox</span>
+        </div>
+        <script src="/MusicPlayer/Script.js"></script>
+    </div>
+    
+</body>
+</html>

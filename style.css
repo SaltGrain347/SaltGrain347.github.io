@@ -1,57 +1,123 @@
+/*                                                                            
+                           /@@@@@@@@@@@@@@,                               
+                      ,@@@@@@@@@@@@@@@@@@@@@@@@@                           
+                   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                        
+                 .@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                      
+                %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@(                    
+               @@@@@@@@%       @@@@@@@@@        @@@@@@@.                   
+               @@@@@@@  /@#     #@@@@@*  @@(     @@@@@@@                   
+               @@@@@@@          /@@@@@*         .@@@@@@@                   
+              (@@@@@@@@&,      @@@@@@@@@     ((@@@@@@@@,                   
+               .@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                     
+                  @@@@@@@@@@@@@@@#####&@@@@@@@@@@@@&                       
+                    %@@@@@@@@@@@@@@@@@@@@@@@@@@@@                          
+                        &@@@@@@@@@@@@@@@&&% .*@@@@@@@@                     
+                               .@@@@@@@@@@@@@@@@@@@@@@@@                   
+                            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@                  
+                            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@                  
+                            ,@@@@@@@@,@@@@@@.  %   @@@@@@                  
+                             @@@@@@@  @@@@@@ @@@   @@@@@                   
+                              @@@@@@  #@@@@( @@@   *@@@@                   
+                              /@@@@@   (@@@(        *(                     
+                                                                            
+/////////////////////////////////////////////////////////////////////////*/
+
+
+
+
 @font-face {
-    font-family: "Roboto Mono", monospace;
-    src: url(/RobotoMono.ttf);
-
-    text-align: center;
+  font-family: 'ULTRAFONT';
+  src: url(/VCR_OSD_MONO.ttf);
 }
 
 @font-face {
-    font-family: 'Ultrafont';
-    src: url(/VCR_OSD_MONO.ttf);
+  font-family: 'Magic Forest';
+  src: url(/Magic\ Forest.ttf);
 }
 
-a {
-    color: pink;
+@font-face {
+  font-family: 'Crypt Tomorrow';
+  src: url(/CryptOfTomorrow.ttf);
 }
 
-a:hover {
-    color: magenta;
-    font-weight: bold;
+/* ---------------------------------------------- */
+
+:root {
+  --default: rgb(52, 20, 94);
+  --link: rgb(166, 33, 255);
+  --dark1: rgb(22, 11, 53);
+  --dark2: rgb(25, 12, 41);
+  --dark3: rgb(6, 3, 20);
+  --light1: rgb(213, 150, 255);
+  --light2: rgb(212, 240, 255);
 }
 
-a:visited {
-    color: mediumpurple;
+
+html {
+  scroll-behavior: smooth;
+  cursor: url('/cursor.png'), auto;
+
+  image-rendering: optimizeSpeed;
+  /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;
+  /* Firefox                        */
+  image-rendering: -o-crisp-edges;
+  /* Opera                          */
+  image-rendering: -webkit-optimize-contrast;
+  /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;
+  /* Universal support since 2021   */
+  image-rendering: optimize-contrast;
+  /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor;
+  /* IE8+                           */
+  /* Image No Smoothing. */
 }
 
 body {
-    background-image: url(/BG/SpaceBackground.png);
-    background-size: 177px;
-    background-attachment: fixed;
-    animation: moveIt 125s linear infinite;
-    font-family: "Roboto Mono", monospace;
-    color: white;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-display: fallback;
+  font-family: "Magic Forest";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25rem;
+  color: azure;
+  font-display: fallback;
+  /* Font THing */
 
-    cursor: url(/cursor.png), auto;
+  background-image: url(/BG/VeryBackBackground.png), url(/BG/SpaceBackground.png);
+  background-repeat: no-repeat, repeat;
+  background-size: 1920px, auto;
+  animation: BG 1000s linear infinite;
 }
 
-html {
-    scroll-behavior: smooth;
-  }
+/* :focus {
+  outline: 10px double #ff00f7;
+} */
 
-@keyframes moveIt {
-    from {
-        background-position: bottom left;
-    }
-
-    to {
-        background-position: top right;
-    }
+::-webkit-scrollbar {
+  width: 10px;
 }
+
+::-webkit-scrollbar-track {
+  background-color: var(--dark1);
+
+  border: 2px #49004d solid;
+}
+
+body * ::-webkit-scrollbar {
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(#50138a, #213e9c);
+  border-radius: 25px;
+  border: 2px #94129b solid;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(#8400ff, #008cff);
+  border: 2px #d618e0 solid;
+}
+
 
 h1,
 h2,
@@ -59,166 +125,374 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Ultrafont";
+  font-family: "ULTRAFONT";
+  line-height: 25px;
+  margin-top: 5px;
 }
 
 h1 {
-    font-size: 250%;
+  font-size: 3.5rem;
 }
 
-div.Main {
-    width: 1500px;
-    margin: auto;
-    /* margin-top: 175px; */
-    border: 5px solid #b700ff;
-    border-radius: 5px;
-    padding: 25px;
-    
-    animation: BodymoveIt 45s linear infinite;
-    height: auto;
+b, strong {
+  letter-spacing: .2rem;
+  
 }
 
-@keyframes BodymoveIt {
-    from {
-        background-position: top center;
-    }
-
-    to {
-        background-position: bottom center;
-    }
+strong {
+  font-size: 1.45rem;
 }
 
-img { 
-    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
-    image-rendering: -moz-crisp-edges;          /* Firefox                        */
-    image-rendering: -o-crisp-edges;            /* Opera                          */
-    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
-    image-rendering: pixelated;                 /* Universal support since 2021   */
-    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
-    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
-
+ul {
+  line-height: 150%;
 }
 
-div.MainHeader {
-    background-image: url(BG/Header\ Banner.png);
-    background-size: auto;
-    height: 175px;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 10px;
-    border: 2px solid white;
-    animation: moveIt 50s linear infinite;
+a, a:visited {
+    color: var(--link);
+    transition: all .1s ease-in-out;
 }
 
-img.SaltButton {
-    transition: transform .05s linear
-}
-
-img.SaltButton:hover {
-    transform: scale(1.1);
-}
-
-img.ProjectButton {
-    width: 64px;
-    height: auto;
-}
-
-img.ProjectThumb {
-    width: 405px;
-    height: 270px;
-    object-fit: cover;
-}
-
-.BaldiButton {
-    border: 25px solid transparent;
-    padding: 0px 25px;
-    line-height: 75px;
-    border-image: url(/Button-Inactive.png) 20 round;
-    box-shadow: inset 0 500px 10px #9a00a3;
-    font-size: 25px;
+a:hover {
+    color: var(--light1);
+    letter-spacing: .5px;
     font-weight: bold;
-    text-decoration: none;
-
-    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
-    image-rendering: -moz-crisp-edges;          /* Firefox                        */
-    image-rendering: -o-crisp-edges;            /* Opera                          */
-    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
-    image-rendering: pixelated;                 /* Universal support since 2021   */
-    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
-    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
 }
 
-a.BaldiButton, a.BaldiButton:hover, a.BaldiButton:active, a.BaldiButton:visited {
-    color:white;
-}
-
-.BaldiButton:active {
-    border-image-source: url(/Button-Active.png);
-    box-shadow: inset 0 100px 10px #770084;
-}
-
-small {
-    font-size: 75%;
-}
-
-.Neon1 {
-    border-radius: 30px;
-    box-shadow: 0px 0px 10px 10px #bc75ff;
-}
-
-.Neon2 {
-    border: 5px solid #b700ff;
-    border-radius: 28px;
-}
-
-.Neon3 {
-    border: 5px solid white;
-    border-radius: 25px;
-}
-
-.Neon4 {
-    border: 5px solid #b700ff;
-    border-radius: 20px;
-    height: auto;
-    width: 475px;
-    background-color: #160b35;
-    margin: auto;
-    padding: 45px;
-    text-align: center;
-    align-self: center;
-    box-shadow: inset 0px 0px 10px 10px #bc75ff;
+.Float {
+  display: inline-block;
+  animation: floatingText 1s alternate infinite ease-in-out;
 }
 
 .Unfinished {
-    filter: saturate(100%) grayscale(100%);
+  filter: saturate(0%);
 }
 
-.ProjectText p {
-    max-width: 1000px;
-    margin: 10px auto;
+#Logo {
+  width: 500px;
+  display: block;
+  margin: auto;
+}
+
+#Layout {
+  width: 90%;
+  display: flex;
+  gap: 45px;
+  max-width: 1200px;
+
+  margin: 48px auto 75px;
+  justify-content: center;
+}
+
+#NavigateDiv {
+  width: 240px;
+  max-width: 230px;
+  border: solid 32px;
+  border-image: url(/BodyBorder.png) repeat 64;
+  border-image-outset: 16px;
+  border-radius: 32px;
+
+
+  background-color: var(--default);
+
+  padding: 8px;
+  /* text-align: center; */
+}
+
+#NavigateDiv #Sticky {
+  position: sticky;
+  top: 2.5%;
+}
+
+#MainDiv {
+  width: 100%;
+  height: auto;
+
+  border: solid 32px;
+  border-image: url(/BodyBorder.png) repeat 64;
+  border-image-outset: 16px;
+
+  box-shadow: 0 0 16px 20px var(--default);
+
+  background-image: linear-gradient(to top, var(--dark3), var(--dark3), var(--dark3), var(--default));
+  background-size: cover;
+  background-size: 100% 16px;
+  animation: scanlines infinite 500s linear;
+
+  padding: 16px;
+}
+
+#MainDiv .Box {
+  border: var(--light1) 5px solid;
+  background-color: var(--dark3);
+  padding: 30px 25px;
+  border-radius: 10% 0% 10% 0%;
+  margin: 25px auto;
+}
+
+#MainDiv hr, #NavigateDiv hr {
+  border: var(--light2) 2.5px solid;
+  border-radius: 25px;
+}
+
+.Box hr {
+  border: var(--light1) 2.5px solid;
+  border-radius: 25px;
 }
 
 .Spoiler {
-    color:#0a0913;
-    background-color: #0a0913;
-    transition: all .2s ease-out;
-    border-radius: 10px;
-    border: 1px white solid;
-    padding-left: 2px;
-    padding-right: 2px;
-}
-
-.Spoiler a{
-    transition: color .2s ease-out;
-}
-
-.Spoiler:not(:hover) a{
-    color:#0a0913;
+  filter: blur(5px);
+  transition: filter .5s ease-in-out;
 }
 
 .Spoiler:hover {
-    color:white
+  filter: blur(0);
+}
+
+.Button {
+  transition: transform 0.2s ease-in-out;
+}
+
+.Button:hover {
+  transform: scale(1.25);
+}
+
+.NavButton {
+  width: 80%;
+  height: 25px;
+  background-color: var(--dark1);
+  border-radius: 0% 25px 0% 25px;
+  padding: 10px 15px;
+  border: var(--light1) 5px solid;
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+  box-shadow: var(--link) 0px 0px 0px 0px;
+  line-height: 150%;
+  font-size: 1rem;
+  margin: 15px 0px;
+}
+
+.NavButton:hover {
+  transform: translate(10px,-10px);
+  box-shadow: var(--link) -5px 5px 0px 5px;
+  cursor: pointer;
+}
+
+.NavButton:active {
+  transform: translate(5px,-5px);
+  box-shadow: var(--light2) -2.5px 2.5px 0px 2.5px;
+  transition: transform 0.05s ease-in, box-shadow 0.05s ease-out;
+}
+
+.NavButton img {
+  display: block;
+  float: right;
+  height: 25px;
+  width: auto;
+  transform-origin: center;
+}
+
+.NavButtonText,.NavButtonText:hover,.NavButtonText:active,.NavButtonText:visited {
+  color: var(--light2);
+  text-decoration: none;
+  font-family: 'Crypt Tomorrow';
+}
+
+#ProjectList {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+#ProjectList .ProjectLayout {
+  max-width: 100%;
+  display: flex;
+  gap: 16px;
+
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.ProjectLayout .ProjectText {
+  flex-grow: 1;
+  width: 75%;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.ProjectText hr, #ProjectList hr {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.ProjectText strong {
+  font-size: 1.25rem;
+  line-height: 220%;
+}
+
+.ProjectText .Button {
+  margin-top: -10px;
+}
+
+.ProjectLayout .ProjectThumb {
+  max-width: 25%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5% 0% 5% 0%;
+  display: block;
+  border: var(--light1) 5px outset;
+  box-shadow: var(--default) 0px 10px 10px 5px;
+  transition: all .25s ease-in-out;
+}
+
+.ProjectLayout .ProjectThumb:hover {
+  transform: scale(1.35);
+  height: 200px;
+  max-width: 35%;
+  box-shadow: var(--link) 0px 10px 10px 10px;
+}
+
+.ProjectLayout .Button {
+  height: 50px;
+}
+
+.ProjectLayout .IgnoreGap {
+  margin-top: -15px;
+  margin-bottom: -25px;
+}
+
+#MusicPlayerBox {
+  position: fixed;
+  bottom: 2.5%;
+  left: 1.5%;
+  height: 25px;
+  border: solid 32px;
+  border-image: url(/MusicPlayer/MusicPlayerBox.png) repeat 64;
+  border-image-outset: 16px;
+  border-radius: 50px;
+  background-color: var(--dark3);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  font-family: 'Ultrafont';
+}
+
+#MusicPlayerBox #MusicButton {
+  transition: transform 0.2s ease-in-out;
+  transform: translateY(-5px);
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none;
+}
+
+
+#MusicPlayerBox #MusicButton:hover {
+  transform: scale(1.5) translateY(-5px);
+  cursor: pointer;  
+}
+
+#MusicPlayerBox #MusicButton:active {
+  transform: scale(.75) translateY(-5px);
+  cursor: pointer;  
+}
+
+#MusicButton.Disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+
+/* ------------- FOR MOBILE VIEW ------------- */
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+  #Layout {
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 200px;
+  }
+
+  #NavigateDiv {
+    width: 100%;
+    max-width: none;
+  }
+
+  .HideOnMobile {
+    display: none !important;
+  }
+
+  #Logo {
+    width: 100%;
+    display: block;
+  }
+
+
+  .ProjectLayout {
+    flex-direction: column;
+    width: 100%
+  }
+
+  .ProjectThumb, .ProjectText {
+    width: 100% !important;
+  }
+
+  #MusicPlayerBox {
+    width: 50px;
+    overflow: hidden;
+    transition: all 0.25 ease-in-out;
+  }
+
+  #MusicPlayerBox:hover {
+    width: auto;
+    height: 50px;
+  }
+
+  #MusicPlayerBox #MusicText {
+    display: none;
+    transition: all 0.25 ease-in-out;
+  }
+
+    #MusicPlayerBox:hover #MusicText {
+    display: inline;
+  }
+
+}
+
+
+/* KeyFrames */
+
+@keyframes BG {
+  0% {
+    background-position: top center, 0%;
+  }
+
+  100% {
+    background-position: top center, 800% 800%;
+  }
+}
+
+
+@keyframes scanlines {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 0 -10000px;
+  }
+}
+
+@keyframes floatingText {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-5px);
+  }
 }

@@ -5,30 +5,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
-    <title>Salt's Site: Resources</title>
+    <title>Salt's Webcorner ⤳ Resources</title>
     <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <style>
+        .NavButtonWide {
+            width: 40% !important;
+        }
 
+        #SubButton a,#SubButton a:visited,#SubButton a:active,#SubButton a:hover {
+            color: azure;
+            text-decoration: none;
+        }
+
+        .NavButtonWide:hover a {
+            color: var(--light1);
+            letter-spacing: .5px;
+            font-weight: bold;
+        }
+
+        .Tooltip {
+            position: relative;
+        }
+
+        .Tooltip .TooltipText {
+            visibility: hidden;
+            background-color: var(--dark2);
+            text-align: center;
+            border-radius: 25px;
+            padding: 5px 15px;
+            border: var(--link) 5px solid;
+            white-space: nowrap;
+
+            position: absolute;
+            top: 0%;
+            left: 65%;
+            margin-left: -50px;
+            filter: opacity(0%);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .TooltipText::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -15px;
+            border-width: 15px;
+            border-style: solid;
+            border-color: transparent var(--link) transparent transparent;
+            filter: opacity(100%);
+        }
+
+        .Tooltip:hover .TooltipText {
+            visibility: visible;
+            top: 0%;
+            left: 50%;
+            filter: opacity(100%);
+
+        }
+    </style>
 </head>
-<audio id="Music" aria-label="Play music" controls src="/Music/GolfCentral.mp3" hidden loop autoplay></audio>
-<style>
-
-</style>
+<audio id="Music" aria-label="Play music" controls src="/Music/happenshortly.mp3" hidden loop></audio>
 
 <body>
-    <div class="Main" style="background-image: url(/BG/ocean.jpg);">
-        <div class="MainHeader"><img src="/GrainOfSaltLogo.png"
-                height="175px"></div>
+    <img src="/GrainOfSaltLogo.png" id="Logo">
 
-        <h4><i>𝆕 GOLF CENTRAL - Uncanny Cat Golf~</i></h4>
-        <div style="text-align: center;">
+    <div id="Layout">
+        <div id="NavigateDiv">
+            <div id="Sticky">
+            <img src="/yippu.gif" width="100%">
+            <hr>
 
-            <h1>My Resources!</h1>
-            <a href="Baldi Mods" class="BaldiButton">Baldi's Basics Mods</a><br><br>
-            <a href="Sprunki!" class="BaldiButton">Sprunki</a><br><br>
-        <br><a href="/main"><img src="/Button/Return.png" class="SaltButton" style="margin-top: 45px;"></a>
+            <a href="/Home" class="NavButtonText">
+            <div class="NavButton">Home
+            <img src="/SmileyBall/6.png">
+            </div></a>
 
-        </div> 
+            <a href="/About" class="NavButtonText">
+            <div class="NavButton">About
+            <img src="/SmileyBall/4.png">
+            </div></a>
+
+            <a href="/OCs" class="NavButtonText">
+            <div class="NavButton">OCs
+            <img src="/SmileyBall/8.png">
+            </div></a>
+
+            <a href="/Interest/Index" class="NavButtonText">
+            <div class="NavButton">Interest
+            <img src="/SmileyBall/2.png">
+            </div></a>
+
+            <a href="/Project/Index" class="NavButtonText">
+            <div class="NavButton">Projects
+            <img src="/SmileyBall/6.png">
+            </div></a>
+
+            <a href="/Resources/Index" class="NavButtonText">
+            <div class="NavButton">Resources
+            <img src="/SmileyBall/10.png">
+            </div></a>
+            <hr>
+            </div>
+        </div>
+        <div id="MainDiv">
+                <h1>Resources</h1>
+                <p>Welcome to the Resource or the Miscellaneous Page, this is mostly stuff where I used website/asset/etc for my site as a credit or shared for free use, or some pages where I don't know what to categorize them so they are in here such as my picks on baldi basics mods and (not yet) archived/unused stuff!</p>
+                <h2>Subpages</h2>
+                <div id="SubButton">
+                <a href="PickedBaldi"><div class="NavButton NavButtonWide">Salt's Picked Baldi's Basics Mods</div></a>
+                <a href="Sprunki!"><div class="NavButton NavButtonWide">Sprunki (bonzibuddy.tk)</div></a>
+                <div class="Tooltip"><a href="#/"><div class="NavButton NavButtonWide Unfinished">Archive/Old/Unused Stuff</div></a><span class="TooltipText">Not Finished.</span></div>
+                </div><br>
+                <h2>My Stuffs</h2>
+                <h3>Navbutton</h3>
+                <p>Incase if you wanna link me back on your page, you can copy and paste it on your pages!</p>
+                <a href="https://saltgrain347.github.io" target="_blank"><img src="https://saltgrain347.github.io/PersonalButton.png" alt="Salt's Webcorner"></a>
+                <br>
+                <textarea readonly style="height: 50px; width: 250px; resize: vertical;"><a href="https://saltgrain347.github.io" target="_blank"><img src="https://saltgrain347.github.io/PersonalButton.png" alt="Salt's Webcorner"></a></textarea>
+
+                <h2>Free to Use Web Resources</h2>
+                <ul>
+                    <h3>WEBSITES</h3>
+                    <li><a href="https://www.w3schools.com/">w3schools</a> - I heavily <strong>USED</strong> this site for everything, this website has documents on HTML, CSS, & JS. and they give templates for free!</li>
+                    <li><a href="https://webcode.tools/css-generator">CSS Generators</a> - Exactly says on the tin!</li>
+                    <li><a href="https://stackoverflow.com/">stack overflow</a> - literal site for searching help for specifics stuff and suchs.</li>
+                    <h3>GRAPHICS</h3>
+                    <li><a href="https://w.itch.io/world-of-fonts">Anna Anthropy's World of Fonts</a> - A pretty cool pixel fonts collections</li>
+                    <h3>PROGRAMS</h3>
+                    <li><a href="https://code.visualstudio.com/">Visual Studio Code</a> - a source-code editor that I've used entire time when making this site rather than using notepad entire time. literally install bunch of plugins and it makes making the site <strong>VERY HELPFUL</strong></li>
+                    <li><a href="https://github.com/apps/desktop">Github Desktop</a> - this entire site is hosted on Github, which is made more efficient with the help of Github desktop which I can push out an update more faster.</li>
+                </ul>
+        </div>
     </div>
 
+    <div id="MusicPlayerBox">
+        <span id="MusicButton" style="font-size: 2rem;" onclick="MuteButton()">⏸</span>
+        <div style="line-height: 1rem;" id="MusicText">
+            The game will begin shortly
+            <br><span style="font-size: .75rem;">Uni M.</span>
+        </div>
+        <script src="/MusicPlayer/Script.js"></script>
+    </div>
+    
 </body>
-</html>
+</html> 
+<!--

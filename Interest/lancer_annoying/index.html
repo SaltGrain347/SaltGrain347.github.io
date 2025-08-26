@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lancer_annoying</title>
+    <link rel="icon" type="image/x-icon" href="Lancer_overworld_tuba.gif">
+    <style>
+        body {
+            image-rendering: optimizeSpeed;
+            /* STOP SMOOTHING, GIVE ME SPEED  */
+            image-rendering: -moz-crisp-edges;
+            /* Firefox                        */
+            image-rendering: -o-crisp-edges;
+            /* Opera                          */
+            image-rendering: -webkit-optimize-contrast;
+            /* Chrome (and eventually Safari) */
+            image-rendering: pixelated;
+            /* Universal support since 2021   */
+            image-rendering: optimize-contrast;
+            /* CSS3 Proposed                  */
+            -ms-interpolation-mode: nearest-neighbor;
+            /* IE8+                           */
+            /* Image No Smoothing. */
+
+            background-color: black;
+
+
+
+        }
+
+        .Dancer {
+            display: block;
+            position: absolute;
+            transform-origin: center bottom;
+            animation: turning 7s linear infinite; 
+            inset: 0;
+            margin: auto;
+            height: 250px;
+            opacity: 0;
+        }
+
+        .num1 {
+            animation-delay: 1.05s;
+            height: 205px;
+        }
+
+        .num2 {
+            animation-delay: 2.5s;
+            height: 194px;
+        }
+
+        .num3 {
+            animation-delay: 3.5s;
+            height: 205px;
+        }
+
+        .num4 {
+            animation-delay: 4.5s;
+            height: 305px;
+        }
+
+        .num5 {
+            animation-delay: 6s;
+            height: 305px;
+        }
+
+        @keyframes turning {
+            from   { transform: rotate(0deg) translateX(250px) rotate(0deg) scaleX(1); opacity: 1;}
+            49.999%{ transform: rotate(180deg) translateX(250px) rotate(-180deg) scaleX(1); opacity: 1; }
+            50%    { transform: rotate(180deg) translateX(250px) rotate(-180deg) scaleX(-1); opacity: 1; }
+            to     { transform: rotate(360deg) translateX(250px) rotate(-360deg) scaleX(-1); opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/Interest/index">
+    <img src="Lancer_overworld_tuba.gif" class="Dancer">
+    <img src="coody.gif" class="Dancer num1">
+    <img src="Mr Elegnant.gif" class="Dancer num2">
+    <img src="Blockler B.gif" class="Dancer num3">
+    <img src="Top_Chef_overworld.gif" class="Dancer num4">
+    <img src="Jack Person.gif" class="Dancer num5"></a>
+    <audio id="Music" aria-label="Play music" controls src="/Interest/lancer_annoying/Lancer_Annoying.ogg" loop autoplay></audio>
+</body>
+</html>

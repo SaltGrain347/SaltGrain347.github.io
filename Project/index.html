@@ -5,77 +5,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
-    <title>Salt's Site: Projects list</title>
+    <title>Salt's Webcorner ⤳ Projects</title>
     <link rel="icon" type="image/x-icon" href="/favicon.png">
     <style>
-        .Disc {
-            width: 128px;
-            transition: transform .5s ease-in-out;
-            animation: discspin 10s linear infinite;
-            
+         .Tooltip {
+            position: relative;
         }
 
-        .Disc:hover {
-            animation: 0;
-            filter: brightness(125%);
+        .Tooltip .TooltipText {
+            visibility: hidden;
+            background-color: var(--dark2);
+            text-align: center;
+            border-radius: 25px;
+            padding: 5px 15px;
+            border: var(--link) 5px solid;
+            white-space: nowrap;
+
+            position: absolute;
+            top: 0%;
+            left: 65%;
+            margin-left: -50px;
+            filter: opacity(0%);
+            transition: all 0.2s ease-in-out;
         }
 
-        @keyframes discspin {
-            0% {
-                transform: rotateY(0deg);
-                filter: brightness(100%);
-            }
+        .TooltipText::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -15px;
+            border-width: 15px;
+            border-style: solid;
+            border-color: transparent var(--link) transparent transparent;
+            filter: opacity(100%);
+        }
 
-            25% {
-                transform: rotateY(90deg);
-                filter: brightness(25%);
-            }
+        .Tooltip:hover .TooltipText {
+            visibility: visible;
+            top: 0%;
+            left: 50%;
+            filter: opacity(100%);
 
-            50% {
-                transform: rotateY(180deg);
-                filter: brightness(75%);
-            }
+        }
 
-            75% {
-                transform: rotateY(270%);
-                filter: brightness(25%);
-            }
+        .NavButtonWide {
+            width: 35% !important;
+        }
 
-            100% {
-                transform: rotateY(360deg);
-                filter: brightness(100%);
-            }
+        #CategoryButton a,#CategoryButton a:visited,#CategoryButton a:active,#CategoryButton a:hover {
+            color: azure;
+            text-decoration: none;
+        }
+
+        .NavButtonWide:hover a {
+            color: var(--light1);
+            letter-spacing: .5px;
+            font-weight: bold;
         }
     </style>
 </head>
-<audio id="Music" aria-label="Play music" controls src="/Music/JUBRMain.mp3" hidden loop autoplay></audio>
+<audio id="Music" aria-label="Play music" controls src="/Music/MikeBOARD.mp3" hidden loop></audio>
 
 <body>
-    <div class="Main" style="background-image: url(/BG/verystar.gif);">
-        <div class="MainHeader"><img src="/GrainOfSaltLogo.png" height="175px"></div>
+    <img src="/GrainOfSaltLogo.png" id="Logo">
 
-        <h4><i>𝆕 Main Theme - Joe's Ultimate Bus Ride~</i></h4>
-        <div style="text-align: center;">
+    <div id="Layout">
+        <div id="NavigateDiv">
+            <div id="Sticky">
+            <img src="/yippu.gif" width="100%">
+            <hr>
 
-            <h1>Featured Projects</h1>
-            <a href="Baldi Mods#WEGA"><img src="DiscWega.png" class="Disc"></a>
+            <a href="/Home" class="NavButtonText">
+            <div class="NavButton">Home
+            <img src="/SmileyBall/6.png">
+            </div></a>
 
+            <a href="/About" class="NavButtonText">
+            <div class="NavButton">About
+            <img src="/SmileyBall/4.png">
+            </div></a>
 
+            <a href="/OCs" class="NavButtonText">
+            <div class="NavButton">OCs
+            <img src="/SmileyBall/8.png">
+            </div></a>
 
+            <a href="/Interest/Index" class="NavButtonText">
+            <div class="NavButton">Interest
+            <img src="/SmileyBall/2.png">
+            </div></a>
 
-            <h1>Project List</h1>
+            <a href="/Project/Index" class="NavButtonText">
+            <div class="NavButton">Projects
+            <img src="/SmileyBall/6.png">
+            </div></a>
 
-            <a href="Baldi Mods" class="BaldiButton">Baldi's Basics Mods</a><br><br>
-            <a href="Scratch" class="BaldiButton">Scratch Projects/Games</a><br><br>
-            <a href="Roblox" class="BaldiButton Unfinished" title="Not yet finished!">Roblox Games</a><br><br>
-            <a href="MISC" class="BaldiButton Unfinished" title="Not yet finished!">Miscellaneous</a>
+            <a href="/Resources/Index" class="NavButtonText">
+            <div class="NavButton">Resources
+            <img src="/SmileyBall/10.png">
+            </div></a>
+            <hr>
+            </div>
+        </div>
+        <div id="MainDiv">
+                <h1>Projects</h1>
+                <p>This is where I list my projects or projects that I've contributed in the past or now, many projects are within their categories which are subpages, but some are featured below the categories buttons!</p>
+                <h2>Categories</h2>
+                <div id="CategoryButton">
+                <a href="BaldisBasics"><div class="NavButton NavButtonWide">Baldi's Basics Mods</div></a>
+                <a href="Scratch"><div class="NavButton NavButtonWide">Scratch Projects/Games</div></a>
+                <!-- fuck you roblox -->
+                <!-- <div class="Tooltip"> <div class="NavButton NavButtonWide Unfinished"><a href="#/">Roblox Games</a></div>
+                <span class="TooltipText">Not Finished.</span>
+                </div> -->
 
+                    <div class="Tooltip">
+                        <a href="#/"><div class="NavButton NavButtonWide Unfinished">Miscellaneous/Contributed</div></a>
+                        <span class="TooltipText">Not Finished.</span>
+                    </div>
+                </div><br>
 
-            <br><a href="/main"><img src="/Button/Return.png" class="SaltButton" style="margin-top: 45px;"></a>
+                <h2>Featured Projects</h2>
+                <div id="ProjectList">
 
+                    <div class="ProjectLayout">
+                        <img src="Thumbnail/WegaPromoArtGameJolt.png" class="ProjectThumb">
+                        <div class="ProjectText">
+                            <h2>Wega's Way to CRACK A MOVIE! (FREE!)</h2>
+                            <hr>
+                            <p>LWega's Way to CRACK A MOVIE! (FREE!) is my take on <a href="https://peeblo.itch.io/wegas-challenge">Wega's Challenge</a> in Baldi's Schoolhouse, all character are replaced with luigi-based media <span class="Spoiler">(Minus the Bear5)</span> and has a somewhat challenging Hard mode.
+                            <br><strong>Status: Released (Future Update Yet Pending)</strong></p>
+                            <a href="https://gamebanana.com/mods/576754"><img src="/SocialButton/Gamebanana.png" class="Button"></a>
+                            <a href="https://0saltgrain0.itch.io/salts-wegas-challenge"><img src="/SocialButton/Itch.io.png" class="Button"></a>
+                            <a href="https://gamejolt.com/games/salt-wega-challenge/983573"><img src="/SocialButton/Gamejolt.png" class="Button"></a>
+                        </div>
+                    </div>
+                    
+                </div>
         </div>
     </div>
 
+    <div id="MusicPlayerBox">
+        <span id="MusicButton" style="font-size: 2rem;" onclick="MuteButton()">⏸</span>
+        <div style="line-height: 1rem;" id="MusicText">
+            MIKE, the BOARD, please!
+            <br><span style="font-size: .75rem;">Toby Fox</span>
+        </div>
+        <script src="/MusicPlayer/Script.js"></script>
+    </div>
+    
 </body>
-
-</html>
+</html> 
+<!--
