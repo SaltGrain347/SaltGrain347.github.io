@@ -1,3 +1,7 @@
+[27 August 2025]
+Fixed most of the buttons leading to 404s, Issue stemps from the Live server feature on VSCode is straight up not case sensitive with URLs, but now it's fixed. also I've deleted most of the removed stuffs.
+
+
 [26 August 2025]
 SITE OVERHAUL AUUUGHHHHHH!!! This rehaul had an earlier version but it wasn't mobile-friendly much uglier and plus it was just old style but with sidebar, but now it's OVERHAULLED!!!!!!! Aughh!!!!!!!! i'm done i'm gonna go to school bahbye!
 
